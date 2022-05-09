@@ -1,0 +1,30 @@
+# Spring properties
+spring:
+  application:
+    name: catalog-service
+  datasource:
+    url: jdbc:mysql://localhost/cosmicsstore
+    username: root
+    password: a1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+# HTTP Server
+server:
+  port: 1113   # HTTP (Tomcat) port
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus

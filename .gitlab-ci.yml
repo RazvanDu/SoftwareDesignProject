@@ -1,0 +1,11 @@
+workflow:
+  rules:
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"
+
+stages:
+  - call_jenkins
+
+Jenkins API Call:
+  stage: call_jenkins
+  script:
+    - curl "http://localhost:8080/generic-webhook-trigger/invoke?token=razvanstoken"

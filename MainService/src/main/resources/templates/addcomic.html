@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cosmics Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top shadow-lg">
+
+        <p>
+            <a href="/" class="navbar-brand d-flex w-50 justify-content-start">Cosmics Store</a>
+            <div th:if="${seller}">
+                <a href="/addcomic" type="button" class="btn btn-primary" role="button">Add comic</a>
+            </div>
+        </p>
+
+        <div class="mx-auto"></div>
+
+        <div class="justify-content-end">
+            <div th:if="${logged}">
+                <a href="/cart" type="button" class="btn btn-success" role="button">Cart</a>
+                <a href="/logoutAction" type="button" class="btn btn-secondary" role="button">Logout</a>
+                <h8 class="text-white">Hello </h8><h8 class="text-white" th:text="${clientFirstName}"></h8> <h8 class="text-white" th:text="${clientLastName}"></h8>
+            </div>
+            <div th:unless="${logged}">
+                <a href="/login" type="button" class="btn btn-success" role="button">Login</a>
+            </div>
+        </div>
+
+    </nav>
+
+</head>
+<body>
+
+    <style>
+        body {
+            background-image: url("images/coolbackgroundd.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .idk {
+            margin-left: 40%;
+            margin-right: 40%;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <div th:if="${completed}">
+        <script type="text/javascript">
+            $(window).on('load', function() {
+                $('#paidModal').modal('show');
+            });
+        </script>
+        <div class="modal" tabindex="-1" role="dialog" id="paidModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Added comic</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p th:inline="text">Successfuly added the comic</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="idk align-content-center">
+        <form action="/addcomicAction" enctype="multipart/form-data" method="POST">
+
+            <div class="form-group">
+                <label for="title"><h4 class="text-white">Title:</h4></label>
+                <input type="text" class="form-control" name="title" id="title" placeholder="Enter title">
+            </div>
+
+            <div class="form-group">
+                <label for="sel1"><h4 class="text-white">Select series:</h4></label>
+                <select class="form-control" name="sel1" id="sel1">
+                    <tr th:each="serie: ${series}">
+                        <option th:text="${serie.get('title')}"></option>
+                    </tr>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="issue"><h4 class="text-white">Issue number:</h4></label>
+                <input type="text" class="form-control" id="issue" placeholder="Enter issue number" name="issue">
+            </div>
+
+            <div class="form-group">
+                <label for="price"><h4 class="text-white">Price:</h4></label>
+                <input type="text" class="form-control" id="price" placeholder="Enter price" name="price">
+            </div>
+
+            <div class="form-group">
+                <label for="writer"><h4 class="text-white">Select writer:</h4></label>
+                <select class="form-control" id="writer" name="writer">
+                    <tr th:each="writer: ${writers}">
+                        <option th:text="${writer.get('name')}"></option>
+                    </tr>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="preview"><h4 class="text-white">Preview link:</h4></label>
+                <input type="text" class="form-control" id="preview" placeholder="Enter preview" name="preview">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="cover"><h4 class="text-white">Choose cover:</h4></label>
+                <input type="file" class="form-control" id="cover" name="cover" />
+            </div>
+
+            <div class="form-group" style="float: right;">
+                <button type="submit" class="btn btn-success align-content-center" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

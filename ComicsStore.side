@@ -1,0 +1,3150 @@
+{
+  "id": "1611b3b0-41bc-4d7f-8a87-1f6563c5aac6",
+  "version": "2.0",
+  "name": "ComicsStore",
+  "url": "http://localhost:1111",
+  "tests": [{
+    "id": "e0381f3a-47b4-4278-84d2-fba41b155746",
+    "name": "indexPageTest",
+    "commands": [{
+      "id": "714b309a-f3c2-4c75-bd86-c29dab085e45",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bf0c703-35da-44eb-8119-683b4676039f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x849",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06d8b51d-ccec-480e-b04f-620b491d6770",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Cosmics Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "486e6f0d-70ca-4406-ad82-e173eba02cd5",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Cosmics Store",
+      "targets": [
+        ["linkText=Cosmics Store", "linkText"],
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'Cosmics Store')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cosmics Store')]", "xpath:innerText"]
+      ],
+      "value": "Cosmics Store"
+    }, {
+      "id": "e359fb39-cda0-4172-bcae-2890d001115a",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "Login"
+    }, {
+      "id": "fbee5ce5-14c7-4116-a258-f9f483dafb03",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=See the comic",
+      "targets": [
+        ["linkText=See the comic", "linkText"],
+        ["css=.card:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'See the comic')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See the comic')]", "xpath:innerText"]
+      ],
+      "value": "See the comic"
+    }, {
+      "id": "d646e892-73aa-4f2b-88b2-e0941648f518",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=See the comic",
+      "targets": [
+        ["linkText=See the comic", "linkText"],
+        ["css=.card:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'See the comic')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See the comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "fc7a5fcc-f05d-417a-b6ce-edfcccc88631",
+    "name": "loginFailureTest",
+    "commands": [{
+      "id": "c3bba906-5373-475b-8a8a-d69b0f6406cd",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0951795b-f335-4c4f-9f17-63b7a661de62",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x849",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee9026d3-81ee-476b-9024-c653997f88a9",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "Login"
+    }, {
+      "id": "91150eec-30b3-4b70-9d7d-e887516e0afe",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "192e2b27-d40e-4a2c-93b4-8cff61781f3e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(1) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(1) .text-white", "css:finder"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Email:')]", "xpath:innerText"]
+      ],
+      "value": "Email:"
+    }, {
+      "id": "bbe803ed-6129-46b8-8dab-6279b884105b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(2) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(2) .text-white", "css:finder"],
+        ["xpath=//div[2]/label/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Password:')]", "xpath:innerText"]
+      ],
+      "value": "Password:"
+    }, {
+      "id": "0fd2bb95-c37d-494c-a2b0-aaf64d1ed33b",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=signup",
+      "targets": [
+        ["id=signup", "id"],
+        ["linkText=Sign-Up", "linkText"],
+        ["css=#signup", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign-Up')]", "xpath:link"],
+        ["xpath=//a[@id='signup']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/signup')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign-Up')]", "xpath:innerText"]
+      ],
+      "value": "Sign-Up"
+    }, {
+      "id": "2a4f2f77-d696-4e36-8246-181df3cfb98b",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "Login"
+    }, {
+      "id": "ecafb7c4-cdb5-4b30-a09e-a6f83f068ec2",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6e592d3-8184-403f-b4f0-84924ab80775",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "idk@idk.com"
+    }, {
+      "id": "079d562d-e588-4ffc-a0f5-11e27609710f",
+      "comment": "",
+      "command": "click",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pswd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e00e9060-8bd8-42e8-84ca-a72b4a4b01a8",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pswd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "1232"
+    }, {
+      "id": "c3cf8ead-ef35-43c3-bbeb-9fa1969094d2",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "655f013b-fe73-4a8c-89f7-91bd54365a2f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-danger",
+      "targets": [
+        ["css=.text-danger", "css:finder"],
+        ["xpath=//h8", "xpath:position"],
+        ["xpath=//h8[contains(.,'Invalid email or password')]", "xpath:innerText"]
+      ],
+      "value": "Invalid email or password"
+    }]
+  }, {
+    "id": "cba89353-5815-43aa-a1ac-eb94e476791b",
+    "name": "loginSuccessSellerTest",
+    "commands": [{
+      "id": "12457d37-83d0-425d-9a90-ada331919b9a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68a44dbd-cf07-4d0f-b6d9-a7b5f5b2199e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x849",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c892407e-989e-404d-a950-26b4e0c46494",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "Login"
+    }, {
+      "id": "5ab6b205-1ea4-45d0-8ba2-f0036146cc32",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a50a4a6a-8f07-40a1-b263-22bdfdef0527",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(1) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(1) .text-white", "css:finder"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Email:')]", "xpath:innerText"]
+      ],
+      "value": "Email:"
+    }, {
+      "id": "df2f654f-c0af-442c-8ba1-acaa0552899f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(2) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(2) .text-white", "css:finder"],
+        ["xpath=//div[2]/label/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Password:')]", "xpath:innerText"]
+      ],
+      "value": "Password:"
+    }, {
+      "id": "0fd2650b-b061-40f8-b007-12a17cb0ba36",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "Login"
+    }, {
+      "id": "f8f38402-efba-465d-b049-e03e924217e3",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=signup",
+      "targets": [
+        ["id=signup", "id"],
+        ["linkText=Sign-Up", "linkText"],
+        ["css=#signup", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign-Up')]", "xpath:link"],
+        ["xpath=//a[@id='signup']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/signup')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign-Up')]", "xpath:innerText"]
+      ],
+      "value": "Sign-Up"
+    }, {
+      "id": "e9956990-b263-4f51-a6b2-0a9e62f5f96a",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a4b5b64-c2c8-4beb-9229-34a0c1e0f59c",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "eu@gmail.com"
+    }, {
+      "id": "bdd7c22a-a0f7-4901-af35-cd61bb057e07",
+      "comment": "",
+      "command": "click",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pswd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b0b37cb-26ab-4a62-ae6a-8498a5e89f7c",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pswd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "5908e635-1ce5-4a37-8052-956a3e824f3b",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29d4d8b6-c154-45e8-af14-5cd993efc8fc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.justify-content-end > div",
+      "targets": [
+        ["css=.justify-content-end > div", "css:finder"],
+        ["xpath=//div[3]/div", "xpath:position"]
+      ],
+      "value": "Cart Logout Hello euu nueu"
+    }, {
+      "id": "c671a6e8-b24e-4ecf-95f2-01139e041bb8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Add comic",
+      "targets": [
+        ["linkText=Add comic", "linkText"],
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Add comic')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/addcomic')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a164cf3c-9ee8-4e5c-b753-cba3e220f3ba",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/logoutAction')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b496494-cddf-4a50-88c3-b5dbb1712854",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "Login"
+    }]
+  }, {
+    "id": "21641e5d-f427-41a9-8ee8-1be5fda4923c",
+    "name": "loginSuccessClientTest",
+    "commands": [{
+      "id": "1729e908-b189-4da2-943e-a4dfb61488d1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "332a14c7-7e9e-406b-b3c7-397588b7cad1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x849",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bbac3dd9-020a-4808-bf84-451cfaf0e32b",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "Login"
+    }, {
+      "id": "13e60149-2d71-4e3a-8cf6-c4da38b47bd1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "750748ab-773a-498b-afa8-eb70211fdf16",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(1) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(1) .text-white", "css:finder"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Email:')]", "xpath:innerText"]
+      ],
+      "value": "Email:"
+    }, {
+      "id": "21f04185-c601-4bc5-884c-a532a6b5e237",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(2) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(2) .text-white", "css:finder"],
+        ["xpath=//div[2]/label/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Password:')]", "xpath:innerText"]
+      ],
+      "value": "Password:"
+    }, {
+      "id": "64d9c25d-d3eb-4ac8-87c1-6e5d129d7ea4",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "Login"
+    }, {
+      "id": "51bdf157-046f-4676-8d50-7ac8d19ed3c3",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=signup",
+      "targets": [
+        ["id=signup", "id"],
+        ["linkText=Sign-Up", "linkText"],
+        ["css=#signup", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign-Up')]", "xpath:link"],
+        ["xpath=//a[@id='signup']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/signup')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign-Up')]", "xpath:innerText"]
+      ],
+      "value": "Sign-Up"
+    }, {
+      "id": "901c2bbc-d64e-4fe2-aec4-2eae8ab48ea3",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90dee409-16a1-4950-a826-3479fee9841c",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "notsel@ymail.com"
+    }, {
+      "id": "94d31495-9dc1-4836-b0d9-a9fdc353ec82",
+      "comment": "",
+      "command": "click",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pswd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "155bf8c1-ff94-4d21-8d70-6943a98da1d6",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pswd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "13e11f75-fea5-43ae-b582-2dc86e346579",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f192c990-e1a0-423b-afe8-ce06934e1a45",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-white:nth-child(4)",
+      "targets": [
+        ["css=.text-white:nth-child(4)", "css:finder"],
+        ["xpath=//h8[2]", "xpath:position"],
+        ["xpath=//h8[contains(.,'client')]", "xpath:innerText"]
+      ],
+      "value": "client"
+    }, {
+      "id": "8cbc27cc-4121-41a6-9839-768492eacf02",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/logoutAction')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "7f47a652-d7f7-4439-9546-9f284b81a19d",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Cart",
+      "targets": [
+        ["linkText=Cart", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Cart')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/cart')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": "Cart"
+    }, {
+      "id": "6686b804-81de-4065-8879-1f5a1ceb5e82",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//nav", "xpath:position"]
+      ],
+      "value": "Cosmics Store\\nCart Logout Hello client not sell"
+    }, {
+      "id": "9d02f510-1cb0-42f6-b537-05174c24899a",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "linkText=Add comic",
+      "targets": [
+        ["linkText=Add comic", "linkText"],
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Add comic')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/addcomic')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d199e975-e6d7-4588-b6bd-27a7e416d3bf",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "linkText=Remove the comic",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea441da5-5a0a-4048-b3f7-f2e30e0cacb9",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/logoutAction')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "45a67e25-f39a-4bab-a057-29bdf31676af",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/logoutAction')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "76c7a9e4-61e6-469a-94ed-7063966cdcf9",
+    "name": "seeComicTest",
+    "commands": [{
+      "id": "9304615b-6e4d-4ab8-a162-3dd75aaa2412",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57902853-d626-47bb-82ad-13adce8234a7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x849",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06ab98d7-1df5-4c11-892e-94a33379c5f1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=See the comic",
+      "targets": [
+        ["linkText=See the comic", "linkText"],
+        ["css=.card:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'See the comic')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See the comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd317dec-2f84-435f-a786-dab4f17e08a3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=See the comic",
+      "targets": [
+        ["linkText=See the comic", "linkText"],
+        ["css=.card:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'See the comic')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See the comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e751535-64e3-4b62-b69b-7ac6feba2159",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(4) .text-white",
+      "targets": [
+        ["css=b:nth-child(4) .text-white", "css:finder"],
+        ["xpath=//h3/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Written by:')]", "xpath:innerText"]
+      ],
+      "value": "Written by:"
+    }, {
+      "id": "263ee8d2-93c2-4e17-843b-880a94c135a5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(6) .text-white",
+      "targets": [
+        ["css=b:nth-child(6) .text-white", "css:finder"],
+        ["xpath=//b[2]/h3/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Series:')]", "xpath:innerText"]
+      ],
+      "value": "Series:"
+    }, {
+      "id": "6cfd1792-24ac-441a-9da4-9ebb13562591",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(8) .text-white",
+      "targets": [
+        ["css=b:nth-child(8) .text-white", "css:finder"],
+        ["xpath=//b[3]/h3/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Price:')]", "xpath:innerText"]
+      ],
+      "value": "Price:"
+    }, {
+      "id": "efbd381b-49f3-4e41-908c-66eaae013c4a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=h6:nth-child(5) span",
+      "targets": [
+        ["css=h6:nth-child(5) span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Jim Starlin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54ed21a3-a0d5-4970-9619-d8916fb65881",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=h6:nth-child(7) span",
+      "targets": [
+        ["css=h6:nth-child(7) span", "css:finder"],
+        ["xpath=//h6[2]/p/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Infinity Gauntlet')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48761cfe-ab91-4eba-b627-6bfe3d73abf9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-white > span",
+      "targets": [
+        ["css=.text-white > span", "css:finder"],
+        ["xpath=//p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2.79')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "81a32cb3-aeed-4a22-8f2c-be7495278225",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h6:nth-child(5) span",
+      "targets": [
+        ["css=h6:nth-child(5) span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Jim Starlin')]", "xpath:innerText"]
+      ],
+      "value": "writer"
+    }, {
+      "id": "7d891204-dcc5-43fc-b511-a4c0d6f04b2f",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h6:nth-child(7) span",
+      "targets": [
+        ["css=h6:nth-child(7) span", "css:finder"],
+        ["xpath=//h6[2]/p/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Infinity Gauntlet')]", "xpath:innerText"]
+      ],
+      "value": "series"
+    }, {
+      "id": "4b8e98a8-c22c-42fb-b65b-7c2b3c67d36c",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": "issue"
+    }, {
+      "id": "582018c0-1106-4bf9-b246-d68b5045a928",
+      "comment": "",
+      "command": "click",
+      "target": "css=h6:nth-child(5) span",
+      "targets": [
+        ["css=h6:nth-child(5) span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Jim Starlin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "137661df-9804-409d-87e8-7abbca829ab4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Jim Starlin')]", "xpath:innerText"]
+      ],
+      "value": "${writer}"
+    }, {
+      "id": "9548baed-a2b3-4028-8302-6984ae1e5d5a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=${issue}",
+      "targets": [
+        ["linkText=Infinity Gauntlet #1", "linkText"],
+        ["css=h6:nth-child(7) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Infinity Gauntlet #1')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//h6[2]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "009501ac-a18c-436f-95aa-6cc9a3426ec7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${issue}",
+      "targets": [
+        ["linkText=Infinity Gauntlet #1", "linkText"],
+        ["css=h6:nth-child(7) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Infinity Gauntlet #1')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//h6[2]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ef866a1-b6e5-47e2-8eaa-8c69a253bb28",
+      "comment": "",
+      "command": "click",
+      "target": "css=h6:nth-child(7) span",
+      "targets": [
+        ["css=h6:nth-child(7) span", "css:finder"],
+        ["xpath=//h6[2]/p/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Infinity Gauntlet')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e0237a5-cadb-475e-be0e-bfb8372805fa",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Infinity Gauntlet')]", "xpath:innerText"]
+      ],
+      "value": "${series}"
+    }, {
+      "id": "34cc75ae-a652-4f03-a28c-be71f2ab4536",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=${issue}",
+      "targets": [
+        ["linkText=Infinity Gauntlet #1", "linkText"],
+        ["css=h6:nth-child(7) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Infinity Gauntlet #1')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//h6[2]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4c2c0fb-3cc3-41b1-88d5-6a2ab93cbda1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(4) .text-white",
+      "targets": [
+        ["css=b:nth-child(4) .text-white", "css:finder"],
+        ["xpath=//h3/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Publisher:')]", "xpath:innerText"]
+      ],
+      "value": "Publisher:"
+    }]
+  }, {
+    "id": "d826c9c3-7b10-43bf-9dd4-aefdb6c4bc93",
+    "name": "loginSuccessAdminTest",
+    "commands": [{
+      "id": "7c308d8d-dfff-4b21-a95c-ac58407e833a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38c22fef-772b-4002-a684-6de89a0ca836",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x849",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72c0212f-e1f3-468e-a893-7feb9428dc36",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Cosmics Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f74edf9f-c20d-41df-aa57-881ec17a9986",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ecd982d-41ed-406c-bf48-4985ff424f9b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "544e48a6-f4fb-4a5a-b368-7996c8e5581c",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8597e09-2b94-4900-bc9f-44464018094c",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "duck@gmail.com"
+    }, {
+      "id": "5411d8b4-f70d-4fb3-b63b-8499ae55ca0b",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pswd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "dbcc1f88-29fe-4502-b107-959cac477d77",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "511f6018-018b-44ee-b251-67c91d717e32",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//nav", "xpath:position"]
+      ],
+      "value": "Cosmics Store\\nCart Logout Hello Admin Admin"
+    }, {
+      "id": "4ab4584b-9685-4ede-9b12-eb1379e9e826",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Remove the comic",
+      "targets": [
+        ["linkText=Remove the comic", "linkText"],
+        ["css=.card:nth-child(1) > .card-body > div > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Remove the comic')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/removecomic?issueId=1')]", "xpath:href"],
+        ["xpath=//div/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Remove the comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d270d45-3eea-486c-8888-fa62dd9657b4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/logoutAction')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d6062775-cfa0-423b-80ff-54071bc25224",
+    "name": "seeComicAsClientTest",
+    "commands": [{
+      "id": "7db975c7-ba9c-4a00-90cc-4fb86f116421",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b85e1a0-bea5-4e2d-a137-e3ff574c9299",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x849",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7e7d088-b286-479f-96ec-c1ea3694772d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a0e9510-1093-402a-b28d-477027595423",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b700719-df56-4103-adfe-008423d47c5a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(1) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(1) .text-white", "css:finder"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Email:')]", "xpath:innerText"]
+      ],
+      "value": "Email:"
+    }, {
+      "id": "5f79a3ca-6621-4208-a0f7-fdc13ea5946e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(2) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(2) .text-white", "css:finder"],
+        ["xpath=//div[2]/label/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Password:')]", "xpath:innerText"]
+      ],
+      "value": "Password:"
+    }, {
+      "id": "dfa3557d-f321-4406-a410-22c1264b049d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7e05b12-c3be-4c53-ac94-6ea92071b62e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=signup",
+      "targets": [
+        ["id=signup", "id"],
+        ["linkText=Sign-Up", "linkText"],
+        ["css=#signup", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign-Up')]", "xpath:link"],
+        ["xpath=//a[@id='signup']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/signup')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign-Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "72be8e3a-3edb-4ed2-9342-0d88983f7b85",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c6c48e5-9858-4bf7-86d1-bc31e0bfed9b",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "notsel@ymail.com"
+    }, {
+      "id": "ad56530c-beaf-4179-8a23-3a7d190ef8b2",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pswd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "3e4a2775-686b-4b06-bed5-1e78ef326f4d",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb6be61e-52bf-4cad-9253-db3f535357ac",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//nav", "xpath:position"]
+      ],
+      "value": "Cosmics Store\\nCart Logout Hello client not sell"
+    }, {
+      "id": "06785a57-04c8-4f6c-8c1c-a7626372b970",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=See the comic",
+      "targets": [
+        ["linkText=See the comic", "linkText"],
+        ["css=.card:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'See the comic')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See the comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79bf7f7f-1e5e-49b5-8659-420a2cdf5c77",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=See the comic",
+      "targets": [
+        ["linkText=See the comic", "linkText"],
+        ["css=.card:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'See the comic')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See the comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e8dbe3b-8638-4b50-9d73-ae7e9e587f07",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(4) .text-white",
+      "targets": [
+        ["css=b:nth-child(4) .text-white", "css:finder"],
+        ["xpath=//h3/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Written by:')]", "xpath:innerText"]
+      ],
+      "value": "Written by:"
+    }, {
+      "id": "59301d82-ffb9-4e28-aa88-c29b053da3f9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(6) .text-white",
+      "targets": [
+        ["css=b:nth-child(6) .text-white", "css:finder"],
+        ["xpath=//b[2]/h3/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Series:')]", "xpath:innerText"]
+      ],
+      "value": "Series:"
+    }, {
+      "id": "9c176a7d-93db-489c-ab2d-75cd2a2e1af1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(8) .text-white",
+      "targets": [
+        ["css=b:nth-child(8) .text-white", "css:finder"],
+        ["xpath=//b[3]/h3/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Price:')]", "xpath:innerText"]
+      ],
+      "value": "Price:"
+    }, {
+      "id": "61f61a34-74e1-425d-9e31-59451e8d1600",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h4",
+      "targets": [
+        ["css=h4", "css:finder"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": "Add to cart"
+    }, {
+      "id": "5ae6620c-7f4d-4a91-937c-1eaff49a7cbf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=h6:nth-child(5) span",
+      "targets": [
+        ["css=h6:nth-child(5) span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Jim Starlin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "856185bf-034f-464c-8237-f896cfd097ce",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=h6:nth-child(7) span",
+      "targets": [
+        ["css=h6:nth-child(7) span", "css:finder"],
+        ["xpath=//h6[2]/p/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Infinity Gauntlet')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27d476dc-ccdd-4ee5-81d6-81bb7b5f5b2a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-white > span",
+      "targets": [
+        ["css=.text-white > span", "css:finder"],
+        ["xpath=//p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2.79')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9ecc2de-80da-4a6d-ab7b-35e233365865",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h6:nth-child(5) span",
+      "targets": [
+        ["css=h6:nth-child(5) span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Jim Starlin')]", "xpath:innerText"]
+      ],
+      "value": "writer"
+    }, {
+      "id": "8484eedc-1033-47f2-9a31-64d6bf26911a",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h6:nth-child(7) span",
+      "targets": [
+        ["css=h6:nth-child(7) span", "css:finder"],
+        ["xpath=//h6[2]/p/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Infinity Gauntlet')]", "xpath:innerText"]
+      ],
+      "value": "series"
+    }, {
+      "id": "6cfe4db9-e3f6-4d0f-b401-b806bb1fc39e",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": "issue"
+    }, {
+      "id": "29892c0d-4938-4e2a-ac29-488d82ad3311",
+      "comment": "",
+      "command": "click",
+      "target": "css=h6:nth-child(5) span",
+      "targets": [
+        ["css=h6:nth-child(5) span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Jim Starlin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b603098-3c57-4362-8166-a2334b776b0b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Jim Starlin')]", "xpath:innerText"]
+      ],
+      "value": "${writer}"
+    }, {
+      "id": "b2e8671e-8711-4478-9bfe-0777ddc2babb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=${issue}",
+      "targets": [
+        ["linkText=Infinity Gauntlet #1", "linkText"],
+        ["css=h6:nth-child(7) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Infinity Gauntlet #1')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//h6[2]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "127acb7e-b3a4-476c-a862-939128a814bc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${issue}",
+      "targets": [
+        ["linkText=Infinity Gauntlet #1", "linkText"],
+        ["css=h6:nth-child(7) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Infinity Gauntlet #1')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//h6[2]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "77238840-850e-476a-affd-bd2c42fadb34",
+      "comment": "",
+      "command": "click",
+      "target": "css=h6:nth-child(7) span",
+      "targets": [
+        ["css=h6:nth-child(7) span", "css:finder"],
+        ["xpath=//h6[2]/p/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Infinity Gauntlet')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5659d58-9d5d-435f-9e79-fc102731c2fc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Infinity Gauntlet')]", "xpath:innerText"]
+      ],
+      "value": "${series}"
+    }, {
+      "id": "c84bd21d-8ae1-4b73-92cf-9a90b40a862c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=${issue}",
+      "targets": [
+        ["linkText=Infinity Gauntlet #1", "linkText"],
+        ["css=h6:nth-child(7) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Infinity Gauntlet #1')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//h6[2]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bbca86bd-d234-4bb3-936f-970c37833e55",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(4) .text-white",
+      "targets": [
+        ["css=b:nth-child(4) .text-white", "css:finder"],
+        ["xpath=//h3/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Publisher:')]", "xpath:innerText"]
+      ],
+      "value": "Publisher:"
+    }, {
+      "id": "3b45b34f-fe64-4395-9ef9-49f5233a3da8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/logoutAction')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5a79daff-7882-46b6-b0b4-d46c9dfcd683",
+    "name": "addAndDeleteComicTest",
+    "commands": [{
+      "id": "7bf17255-5207-4ecc-b9d0-2182dca4898f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5f57ee9-a0a6-485c-bfd1-c93cf310e9ce",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x835",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2794da5d-72e1-4dc7-9452-38c9cc803451",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Cosmics Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e864694c-278c-44ee-8b2d-e82b6bb60b8b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ae43362-9e96-446e-a893-34e55a99fc01",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d079fcec-d1a6-47ec-8d18-a4f9a96fa058",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "704eb069-cebd-4a57-adec-79b9c75eddd8",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "eu@gmail.com"
+    }, {
+      "id": "541193c9-94fe-44a0-a699-a17b10eff251",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pswd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "8a3f2a85-99b6-4c1c-99c1-71e9c18ba2ef",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e83d2343-d76c-47d9-8f76-4e892ae8b89e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//nav", "xpath:position"]
+      ],
+      "value": "Cosmics Store\\nAdd comic\\nCart Logout Hello euu nueu"
+    }, {
+      "id": "a229e614-282d-4057-91b0-a5a9c12dd7d9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Add comic",
+      "targets": [
+        ["linkText=Add comic", "linkText"],
+        ["css=div:nth-child(2) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Add comic')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/addcomic')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9903b804-aae3-49a2-841a-995f14926e4b",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.row",
+      "targets": [
+        ["css=.row", "css:finder"],
+        ["xpath=//body/div/div", "xpath:position"]
+      ],
+      "value": "comics"
+    }, {
+      "id": "474cf3bb-8803-4c9f-94b3-95807b7a2e93",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add comic",
+      "targets": [
+        ["linkText=Add comic", "linkText"],
+        ["css=div:nth-child(2) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Add comic')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/addcomic')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ead471c-072e-4c17-8a27-b39cc097a30f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(1) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(1) .text-white", "css:finder"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Title:')]", "xpath:innerText"]
+      ],
+      "value": "Title:"
+    }, {
+      "id": "617d948d-49a1-40f0-baac-ff66779ffec1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(2) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(2) .text-white", "css:finder"],
+        ["xpath=//div[2]/label/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Select series:')]", "xpath:innerText"]
+      ],
+      "value": "Select series:"
+    }, {
+      "id": "25aed1bf-1c44-4608-be81-a60626848caf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=sel1",
+      "targets": [
+        ["id=sel1", "id"],
+        ["name=sel1", "name"],
+        ["css=#sel1", "css:finder"],
+        ["xpath=//select[@id='sel1']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18b8bb9b-fe5e-4ee6-be17-ee843fd97fd3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(3) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(3) .text-white", "css:finder"],
+        ["xpath=//div[3]/label/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Issue number:')]", "xpath:innerText"]
+      ],
+      "value": "Issue number:"
+    }, {
+      "id": "c903b9d3-a8ec-45c7-ac75-ea91def13949",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(4) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(4) .text-white", "css:finder"],
+        ["xpath=//div[4]/label/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Price:')]", "xpath:innerText"]
+      ],
+      "value": "Price:"
+    }, {
+      "id": "61e573c5-62c5-4406-aca7-4b073515cf64",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(5) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(5) .text-white", "css:finder"],
+        ["xpath=//div[5]/label/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Select writer:')]", "xpath:innerText"]
+      ],
+      "value": "Select writer:"
+    }, {
+      "id": "70b2f81e-5f40-4f01-b381-cf6cabaef359",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=writer",
+      "targets": [
+        ["id=writer", "id"],
+        ["name=writer", "name"],
+        ["css=#writer", "css:finder"],
+        ["xpath=//select[@id='writer']", "xpath:attributes"],
+        ["xpath=//div[5]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df7ca253-6cda-434f-8e84-5028f8888723",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-group:nth-child(6) .text-white",
+      "targets": [
+        ["css=.form-group:nth-child(6) .text-white", "css:finder"],
+        ["xpath=//div[6]/label/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Preview link:')]", "xpath:innerText"]
+      ],
+      "value": "Preview link:"
+    }, {
+      "id": "f23f833a-22bf-4b6f-9012-94078ec7392b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.form-label > .text-white",
+      "targets": [
+        ["css=.form-label > .text-white", "css:finder"],
+        ["xpath=//div[7]/label/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Choose cover:')]", "xpath:innerText"]
+      ],
+      "value": "Choose cover:"
+    }, {
+      "id": "636c81c6-2f3b-40c8-8446-c762ab8b2caa",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=cover",
+      "targets": [
+        ["id=cover", "id"],
+        ["name=cover", "name"],
+        ["css=#cover", "css:finder"],
+        ["xpath=//input[@id='cover']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec152fb5-6764-4ee2-9f85-f071932d94b5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d23a0dc0-8819-41e8-8aff-b722447e8fee",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cce0873e-a6b7-468e-b581-cd38530d9299",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "seleniumTest"
+    }, {
+      "id": "6eebd9b0-47f5-4fdc-a6d6-31afd00ab7ee",
+      "comment": "",
+      "command": "click",
+      "target": "id=sel1",
+      "targets": [
+        ["id=sel1", "id"],
+        ["name=sel1", "name"],
+        ["css=#sel1", "css:finder"],
+        ["xpath=//select[@id='sel1']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "376d8201-fec1-4fa5-bf0f-eb3adbdd3bd8",
+      "comment": "",
+      "command": "select",
+      "target": "id=sel1",
+      "targets": [],
+      "value": "label=Future state"
+    }, {
+      "id": "57048058-cb26-45e2-aac4-b1d9d67a9bc3",
+      "comment": "",
+      "command": "click",
+      "target": "id=issue",
+      "targets": [
+        ["id=issue", "id"],
+        ["name=issue", "name"],
+        ["css=#issue", "css:finder"],
+        ["xpath=//input[@id='issue']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfd05d9a-c556-464f-b078-39169560ccc5",
+      "comment": "",
+      "command": "type",
+      "target": "id=issue",
+      "targets": [
+        ["id=issue", "id"],
+        ["name=issue", "name"],
+        ["css=#issue", "css:finder"],
+        ["xpath=//input[@id='issue']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "29f9f48a-0f96-46be-a8ab-698a7a6b803e",
+      "comment": "",
+      "command": "click",
+      "target": "id=price",
+      "targets": [
+        ["id=price", "id"],
+        ["name=price", "name"],
+        ["css=#price", "css:finder"],
+        ["xpath=//input[@id='price']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0c99c54-2f81-4bd4-b773-4cf08de420ca",
+      "comment": "",
+      "command": "type",
+      "target": "id=price",
+      "targets": [
+        ["id=price", "id"],
+        ["name=price", "name"],
+        ["css=#price", "css:finder"],
+        ["xpath=//input[@id='price']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2.22"
+    }, {
+      "id": "b26cbff7-7358-4009-bd5f-d3ba8c0c64a2",
+      "comment": "",
+      "command": "click",
+      "target": "id=writer",
+      "targets": [
+        ["id=writer", "id"],
+        ["name=writer", "name"],
+        ["css=#writer", "css:finder"],
+        ["xpath=//select[@id='writer']", "xpath:attributes"],
+        ["xpath=//div[5]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "048498e5-6d12-4e39-84c3-2eb55bc170df",
+      "comment": "",
+      "command": "select",
+      "target": "id=writer",
+      "targets": [],
+      "value": "label=Joshua Williamson"
+    }, {
+      "id": "322e6fad-7a78-44e9-9d7a-3af547b91614",
+      "comment": "",
+      "command": "click",
+      "target": "id=preview",
+      "targets": [
+        ["id=preview", "id"],
+        ["name=preview", "name"],
+        ["css=#preview", "css:finder"],
+        ["xpath=//input[@id='preview']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a865cac-7ce8-4d46-af87-e323f955c4d7",
+      "comment": "",
+      "command": "click",
+      "target": "id=preview",
+      "targets": [
+        ["id=preview", "id"],
+        ["name=preview", "name"],
+        ["css=#preview", "css:finder"],
+        ["xpath=//input[@id='preview']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92bbf38a-b809-4d62-a802-42b82ccb246f",
+      "comment": "",
+      "command": "type",
+      "target": "id=preview",
+      "targets": [
+        ["id=preview", "id"],
+        ["name=preview", "name"],
+        ["css=#preview", "css:finder"],
+        ["xpath=//input[@id='preview']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "localhost:1111/addcomic"
+    }, {
+      "id": "ed1e2139-74cf-46cf-a7d7-f69561a7dcec",
+      "comment": "",
+      "command": "click",
+      "target": "id=cover",
+      "targets": [
+        ["id=cover", "id"],
+        ["name=cover", "name"],
+        ["css=#cover", "css:finder"],
+        ["xpath=//input[@id='cover']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4de636ee-c7c7-4ea0-8112-b81cadb3c18e",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e98e8114-f8b3-402f-bf75-2976180aa969",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row",
+      "targets": [
+        ["css=.row", "css:finder"],
+        ["xpath=//body/div/div", "xpath:position"]
+      ],
+      "value": "${comics}\\nseleniumTest\\nJoshua Williamson\\nPrice: $2.22\\nSee the comic"
+    }, {
+      "id": "ef163f2a-f4b5-4de9-bf42-85f233fcf32d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-last-child(1) .btn",
+      "targets": [
+        ["css=.card:nth-child(22) .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'See the comic')])[22]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=55')]", "xpath:href"],
+        ["xpath=//div[22]/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98360820-a9b5-40cc-a47c-362844204231",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'seleniumTest')]", "xpath:innerText"]
+      ],
+      "value": "seleniumTest"
+    }, {
+      "id": "fe478471-c91c-46a6-aec5-8ece7da1bc62",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(4) .text-white",
+      "targets": [
+        ["css=b:nth-child(4) .text-white", "css:finder"],
+        ["xpath=//h3/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Written by:')]", "xpath:innerText"]
+      ],
+      "value": "Written by:"
+    }, {
+      "id": "f9a65b6e-7618-4d68-a9d8-05229088a840",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(6) .text-white",
+      "targets": [
+        ["css=b:nth-child(6) .text-white", "css:finder"],
+        ["xpath=//b[2]/h3/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Series:')]", "xpath:innerText"]
+      ],
+      "value": "Series:"
+    }, {
+      "id": "07a21883-f665-4f6e-b33e-c45ed1ad96ed",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(8) .text-white",
+      "targets": [
+        ["css=b:nth-child(8) .text-white", "css:finder"],
+        ["xpath=//b[3]/h3/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Price:')]", "xpath:innerText"]
+      ],
+      "value": "Price:"
+    }, {
+      "id": "dbf511d8-82d4-457b-9cc0-5df1c7af4020",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-white > span",
+      "targets": [
+        ["css=.text-white > span", "css:finder"],
+        ["xpath=//p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2.22')]", "xpath:innerText"]
+      ],
+      "value": "2.22"
+    }, {
+      "id": "a188549d-3981-4108-8c45-3f0a8fc08044",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h6:nth-child(5) span",
+      "targets": [
+        ["css=h6:nth-child(5) span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Joshua Williamson')]", "xpath:innerText"]
+      ],
+      "value": "Joshua Williamson"
+    }, {
+      "id": "5812fc71-aee7-432f-895d-9b2944fd5b2a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h6:nth-child(7) span",
+      "targets": [
+        ["css=h6:nth-child(7) span", "css:finder"],
+        ["xpath=//h6[2]/p/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Future state')]", "xpath:innerText"]
+      ],
+      "value": "Future state"
+    }, {
+      "id": "dbe8a49c-132c-4a68-aa34-9da609c07bc8",
+      "comment": "",
+      "command": "click",
+      "target": "css=h6:nth-child(5) span",
+      "targets": [
+        ["css=h6:nth-child(5) span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Joshua Williamson')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d5eea43-c5e6-4602-bee2-2892dfea4bc3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=seleniumTest",
+      "targets": [
+        ["linkText=seleniumTest", "linkText"],
+        ["css=h6:nth-child(9) a", "css:finder"],
+        ["xpath=//a[contains(text(),'seleniumTest')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=49')]", "xpath:href"],
+        ["xpath=//h6[4]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'seleniumTest')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce87a64c-bdbb-4f20-b0a7-adab6a233506",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=seleniumTest",
+      "targets": [
+        ["linkText=seleniumTest", "linkText"],
+        ["css=h6:nth-child(9) a", "css:finder"],
+        ["xpath=//a[contains(text(),'seleniumTest')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=49')]", "xpath:href"],
+        ["xpath=//h6[4]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'seleniumTest')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "798545ba-fcbf-4907-a37f-45329cd72a6a",
+      "comment": "",
+      "command": "click",
+      "target": "css=h6:nth-child(7) span",
+      "targets": [
+        ["css=h6:nth-child(7) span", "css:finder"],
+        ["xpath=//h6[2]/p/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Future state')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd0d6883-1e28-4fcb-82bd-a7897bcfcef0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=seleniumTest",
+      "targets": [
+        ["linkText=seleniumTest", "linkText"],
+        ["css=h6:nth-child(17) a", "css:finder"],
+        ["xpath=//a[contains(text(),'seleniumTest')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=49')]", "xpath:href"],
+        ["xpath=//h6[8]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'seleniumTest')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "892efa9a-be76-49c3-b058-20574a29dcff",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=seleniumTest",
+      "targets": [
+        ["linkText=seleniumTest", "linkText"],
+        ["css=h6:nth-child(17) a", "css:finder"],
+        ["xpath=//a[contains(text(),'seleniumTest')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=49')]", "xpath:href"],
+        ["xpath=//h6[8]/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'seleniumTest')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1d058e3-7721-45e0-9799-b94690814d83",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/logoutAction')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d837e395-3463-42f2-929e-eac9c20c7e28",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//nav", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68915c57-b878-42c5-afe4-93262e42d1be",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e01b1a7-73cb-4cff-83a0-4ee0146003fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de829af3-4f63-4368-b40e-c1131a3376d1",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "duck@gmail.com"
+    }, {
+      "id": "3d145b56-ee08-4e9c-8aaf-69773e13d344",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pswd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "4d8c715d-4d88-4867-86ef-d58131ab7e8c",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ee025c1-afe6-48fe-9500-49921335b294",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//nav", "xpath:position"]
+      ],
+      "value": "Cosmics Store\\nCart Logout Hello Admin Admin"
+    }, {
+      "id": "4dfecccb-b51f-41cc-b38b-cdab4cc038dd",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.card:nth-last-child(1) > .card-body > div > .btn",
+      "targets": [
+        ["css=.card:nth-child(22) > .card-body > div > .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Remove the comic')])[22]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/removecomic?issueId=49')]", "xpath:href"],
+        ["xpath=//div[22]/div[2]/div/a", "xpath:position"]
+      ],
+      "value": "Remove the comic"
+    }, {
+      "id": "54a28cf4-5084-4802-99be-489c5319048f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-last-child(1) > .card-body > div > .btn",
+      "targets": [
+        ["css=.card:nth-child(22) > .card-body > div > .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Remove the comic')])[22]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/removecomic?issueId=49')]", "xpath:href"],
+        ["xpath=//div[22]/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d42dc8d6-3b9b-4724-8aae-2fc1a8029df9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/logoutAction')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "adcdd038-b1ea-4416-ac32-93f187137135",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row",
+      "targets": [
+        ["css=.row", "css:finder"],
+        ["xpath=//body/div/div", "xpath:position"]
+      ],
+      "value": "${comics}"
+    }, {
+      "id": "5d608622-ed83-47e4-aba9-1ed036d69152",
+      "comment": "",
+      "command": "open",
+      "target": "/writers?id=7",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85fbbea8-83a0-46a1-b472-72f2492a002c",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "linkText=seleniumTest",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8dc0f899-6e27-41bf-b5a6-a3125a23a23d",
+      "comment": "",
+      "command": "open",
+      "target": "/series?id=5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b5a42af-5101-4018-abca-c7432f36f82f",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "linkText=seleniumTest",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c3695293-7d83-4daf-904b-c6a03e2495d6",
+    "name": "addToCartTest",
+    "commands": [{
+      "id": "3f595796-1ca2-4b62-888d-e57c48e28868",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b79a332-c4b7-4db3-9720-632c07825aa1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x849",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "588e97da-1645-48cf-bf4c-b17bc9a3a87b",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Cosmics Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf3f09d9-2f7d-4999-ab08-171a9bd5017f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50a6b9d1-094b-475c-8d77-18088cfef90d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f44c967-c25a-4a61-a70c-8acaa5452bc9",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d157923f-bf85-469e-a8b2-c3fea3129305",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "notsel@ymail.com"
+    }, {
+      "id": "626c4758-ffa3-42bb-b837-0203ef356e77",
+      "comment": "",
+      "command": "type",
+      "target": "id=pwd",
+      "targets": [
+        ["id=pwd", "id"],
+        ["name=pswd", "name"],
+        ["css=#pwd", "css:finder"],
+        ["xpath=//input[@id='pwd']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "a194345b-c266-423c-babd-0ea47eb928fa",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7b49837-10c2-49be-acef-6260085b081c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.navbar",
+      "targets": [
+        ["css=.navbar", "css:finder"],
+        ["xpath=//nav", "xpath:position"]
+      ],
+      "value": "Cosmics Store\\nCart Logout Hello client not sell"
+    }, {
+      "id": "a538afd9-43ab-443c-8b03-1bb2a537beb2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=See the comic",
+      "targets": [
+        ["linkText=See the comic", "linkText"],
+        ["css=.card:nth-child(1) .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'See the comic')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See the comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "880f348d-c2f8-4e6a-94ef-5489acfc3c98",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.row",
+      "targets": [
+        ["css=.row", "css:finder"],
+        ["xpath=//body/div/div", "xpath:position"]
+      ],
+      "value": "comics"
+    }, {
+      "id": "839b887b-6102-4ea1-ae46-a16be4c53f0f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=See the comic",
+      "targets": [
+        ["linkText=See the comic", "linkText"],
+        ["css=.card:nth-child(1) .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'See the comic')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See the comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2a25961-8a0d-4a8c-a658-fe463e217328",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": "comic1"
+    }, {
+      "id": "8bbb2ac2-b229-46aa-9ed1-f9dc098aee41",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-white > span",
+      "targets": [
+        ["css=.text-white > span", "css:finder"],
+        ["xpath=//p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2.79')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2274ae95-3cf8-4550-be59-95e288cb979e",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.text-white > span",
+      "targets": [
+        ["css=.text-white > span", "css:finder"],
+        ["xpath=//p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2.79')]", "xpath:innerText"]
+      ],
+      "value": "price1"
+    }, {
+      "id": "f07fcd34-3094-4ff7-bab5-e9f021937da6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=cart",
+      "targets": [
+        ["id=cart", "id"],
+        ["css=#cart", "css:finder"],
+        ["xpath=//p[@id='cart']", "xpath:attributes"],
+        ["xpath=//h4/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a473532-98cf-4e9e-ad43-70cf9d46d75d",
+      "comment": "",
+      "command": "click",
+      "target": "id=cart",
+      "targets": [
+        ["id=cart", "id"],
+        ["css=#cart", "css:finder"],
+        ["xpath=//p[@id='cart']", "xpath:attributes"],
+        ["xpath=//h4/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7628daa2-6c3f-427d-86a2-a5bfb05a7611",
+      "comment": "",
+      "command": "click",
+      "target": "id=cart",
+      "targets": [
+        ["id=cart", "id"],
+        ["css=#cart", "css:finder"],
+        ["xpath=//p[@id='cart']", "xpath:attributes"],
+        ["xpath=//h4/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d19a36d7-ed22-47a6-bb3a-39c5f0400ac6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cosmics Store",
+      "targets": [
+        ["linkText=Cosmics Store", "linkText"],
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'Cosmics Store')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cosmics Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4d15af1-3209-4b63-b16d-a7080a3b6561",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(3) .btn",
+      "targets": [
+        ["css=.card:nth-child(3) .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'See the comic')])[3]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=4')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ccc9b123-acad-431b-87c2-8a01258dd028",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": "comic2"
+    }, {
+      "id": "ceea81d6-6faa-41a4-976c-53350b12856b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-white > span",
+      "targets": [
+        ["css=.text-white > span", "css:finder"],
+        ["xpath=//p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'3.99')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "815e3f8a-c896-40bf-9a7f-d169f9d338b6",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.text-white > span",
+      "targets": [
+        ["css=.text-white > span", "css:finder"],
+        ["xpath=//p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'3.99')]", "xpath:innerText"]
+      ],
+      "value": "price2"
+    }, {
+      "id": "ac4d61a0-fdb8-47ac-9499-5934371a69e1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Add to cart",
+      "targets": [
+        ["linkText=Add to cart", "linkText"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=(//a[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/addToCart?issueId=4&isCart=false')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bcaae72e-e654-4f81-a33f-f3835a7d7278",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add to cart",
+      "targets": [
+        ["linkText=Add to cart", "linkText"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=(//a[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/addToCart?issueId=4&isCart=false')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b02f6f55-3154-4a22-8467-3c2d0717c101",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cart",
+      "targets": [
+        ["linkText=Cart", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Cart')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/cart')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6199be6-9b12-4c1c-b00b-5286376e87b0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.card:nth-child(7) .card-title",
+      "targets": [
+        ["css=.card:nth-child(7) .card-title", "css:finder"],
+        ["xpath=//h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": "${comic1}"
+    }, {
+      "id": "7625c204-bb9f-4713-82b6-baa7d9923033",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.card:nth-child(8) .card-title",
+      "targets": [
+        ["css=.card:nth-child(8) .card-title", "css:finder"],
+        ["xpath=//div[2]/div/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Infinity Gauntlet #3')]", "xpath:innerText"]
+      ],
+      "value": "${comic2}"
+    }, {
+      "id": "37d5aa08-b4c9-4944-9a86-515a6424f179",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.card:nth-child(7) h8:nth-child(2) h8",
+      "targets": [
+        ["css=.card:nth-child(7) h8:nth-child(2) h8", "css:finder"],
+        ["xpath=//p/h8", "xpath:position"]
+      ],
+      "value": "${price1}"
+    }, {
+      "id": "bc3c04eb-1d15-4916-8a9e-f47a3efcb74d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.card:nth-child(8) h8:nth-child(2) h8",
+      "targets": [
+        ["css=.card:nth-child(8) h8:nth-child(2) h8", "css:finder"],
+        ["xpath=//div[2]/div/div/h8/p/h8", "xpath:position"]
+      ],
+      "value": "${price2}"
+    }, {
+      "id": "9e00f3b0-1f6e-4817-a2ae-6418bdf95304",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.card:nth-child(7) h8:nth-child(3) h8",
+      "targets": [
+        ["css=.card:nth-child(7) h8:nth-child(3) h8", "css:finder"],
+        ["xpath=//h8[2]/p/h8", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "d79dd6fe-22f9-41ef-b837-280da3f1827d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.card:nth-child(8) h8:nth-child(3) h8",
+      "targets": [
+        ["css=.card:nth-child(8) h8:nth-child(3) h8", "css:finder"],
+        ["xpath=//div[2]/div/div/h8[2]/p/h8", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "8e43cefe-bbac-4878-b287-40029c76c92f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (parseFloat(${price2}) + parseFloat(2 * ${price1})).toFixed(2)",
+      "targets": [],
+      "value": "total"
+    }, {
+      "id": "d90d7d1c-93ec-4dad-a38c-2df35fdb44b9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-white:nth-child(1)",
+      "targets": [
+        ["css=.text-white:nth-child(1)", "css:finder"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Total price: $9.57')]", "xpath:innerText"]
+      ],
+      "value": "Total price: $${total}"
+    }, {
+      "id": "05918596-a8e6-4a24-bee7-65ba08c4eefe",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=See comic",
+      "targets": [
+        ["linkText=See comic", "linkText"],
+        ["css=.card:nth-child(7) .btn-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'See comic')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "581f063f-8cdb-4a31-94a2-e380bcd2fb74",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Add more",
+      "targets": [
+        ["linkText=Add more", "linkText"],
+        ["css=.card:nth-child(7) .btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Add more')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/addToCart?issueId=1&isCart=true')]", "xpath:href"],
+        ["xpath=//div/div/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Add more')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fb29767-e5d8-4c1f-9fe1-b906ae8cba23",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Remove one",
+      "targets": [
+        ["linkText=Remove one", "linkText"],
+        ["css=.card:nth-child(7) .btn-danger", "css:finder"],
+        ["xpath=//a[contains(text(),'Remove one')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/removeFromCart?issueId=1&isCart=true')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Remove one')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "deebf696-ea7a-48c3-b799-d0d618d6101b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=buy",
+      "targets": [
+        ["id=buy", "id"],
+        ["css=#buy", "css:finder"],
+        ["xpath=//button[@id='buy']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buy')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "550476f4-567c-4905-aff8-af0a2e1badfd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(8) .btn-danger",
+      "targets": [
+        ["css=.card:nth-child(8) .btn-danger", "css:finder"],
+        ["xpath=(//a[contains(text(),'Remove one')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/removeFromCart?issueId=4&isCart=true')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50acab07-ba94-440e-91d4-46ca404b7bfc",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.card:nth-child(7) .card-title",
+      "targets": [],
+      "value": "${comic2}"
+    }, {
+      "id": "1500486b-59ef-4f74-9731-8d60b77c036e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (2 * ${price1}).toFixed(2)",
+      "targets": [],
+      "value": "total"
+    }, {
+      "id": "676184ec-674e-4f08-88cd-f11ac8d74aa9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-white:nth-child(1)",
+      "targets": [
+        ["css=.text-white:nth-child(1)", "css:finder"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Total price: $9.57')]", "xpath:innerText"]
+      ],
+      "value": "Total price: $${total}"
+    }, {
+      "id": "7fbe64d1-54ad-400f-ba44-6d551d3b72b8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add more",
+      "targets": [
+        ["linkText=Add more", "linkText"],
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Add more')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/addToCart?issueId=1&isCart=true')]", "xpath:href"],
+        ["xpath=//div/div/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Add more')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e6b503d-21fb-41ac-a435-8a17bc9d889f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h8:nth-child(3) h8",
+      "targets": [
+        ["css=h8:nth-child(3) h8", "css:finder"],
+        ["xpath=//h8[2]/p/h8", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "c11694be-fa67-45c3-90e7-144a2379608c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (3 * ${price1}).toFixed(2)",
+      "targets": [],
+      "value": "total"
+    }, {
+      "id": "14b9381c-2a0c-4ed7-87fc-cc71660582c0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-white:nth-child(1)",
+      "targets": [
+        ["css=.text-white:nth-child(1)", "css:finder"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Total price: $8.37')]", "xpath:innerText"]
+      ],
+      "value": "Total price: $${total}"
+    }, {
+      "id": "1fd5f249-caf1-4331-9105-7aad53efd812",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=See comic",
+      "targets": [
+        ["linkText=See comic", "linkText"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'See comic')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/comics?id=1')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See comic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0a758e2-ad35-42aa-90fe-87d635ac7293",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Infinity Gauntlet #1')]", "xpath:innerText"]
+      ],
+      "value": "${comic1}"
+    }, {
+      "id": "1573c0a9-4818-4f60-b482-84cc0b692052",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cart",
+      "targets": [
+        ["linkText=Cart", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Cart')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/cart')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "33872c29-73dc-45f0-b681-cc8a1a97ba7e",
+      "comment": "",
+      "command": "click",
+      "target": "id=buy",
+      "targets": [
+        ["id=buy", "id"],
+        ["css=#buy", "css:finder"],
+        ["xpath=//button[@id='buy']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buy')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "12c9c488-2b73-410a-ad18-83d458dc9c97",
+      "comment": "",
+      "command": "click",
+      "target": "id=address",
+      "targets": [
+        ["id=address", "id"],
+        ["css=#address", "css:finder"],
+        ["xpath=//input[@id='address']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModal']/div/div/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c623509-5762-4d56-b4cf-c6c64aa77095",
+      "comment": "",
+      "command": "type",
+      "target": "id=address",
+      "targets": [
+        ["id=address", "id"],
+        ["css=#address", "css:finder"],
+        ["xpath=//input[@id='address']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModal']/div/div/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "aa"
+    }, {
+      "id": "244408ca-3fe2-4132-ac0b-6341a6fe97d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=card",
+      "targets": [
+        ["id=card", "id"],
+        ["css=#card", "css:finder"],
+        ["xpath=//input[@id='card']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModal']/div/div/div[2]/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d89b33f-7a78-423e-b8a2-fa9620bba19c",
+      "comment": "",
+      "command": "type",
+      "target": "id=card",
+      "targets": [
+        ["id=card", "id"],
+        ["css=#card", "css:finder"],
+        ["xpath=//input[@id='card']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModal']/div/div/div[2]/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "aa"
+    }, {
+      "id": "85dc4dc3-1839-4ea3-84e7-ca004eace124",
+      "comment": "",
+      "command": "click",
+      "target": "id=cvc",
+      "targets": [
+        ["id=cvc", "id"],
+        ["css=#cvc", "css:finder"],
+        ["xpath=//input[@id='cvc']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModal']/div/div/div[2]/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f2a24ff-63a5-4e88-8531-571f1ed88b7a",
+      "comment": "",
+      "command": "type",
+      "target": "id=cvc",
+      "targets": [
+        ["id=cvc", "id"],
+        ["css=#cvc", "css:finder"],
+        ["xpath=//input[@id='cvc']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModal']/div/div/div[2]/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "aa"
+    }, {
+      "id": "37219225-6fb7-4f19-b42f-6ba3b09a7dc1",
+      "comment": "",
+      "command": "click",
+      "target": "id=message",
+      "targets": [
+        ["id=message", "id"],
+        ["css=#message", "css:finder"],
+        ["xpath=//textarea[@id='message']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModal']/div/div/div[2]/form/div[4]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8427e443-6c9b-4f69-ae81-ca8b1c03db6a",
+      "comment": "",
+      "command": "type",
+      "target": "id=message",
+      "targets": [
+        ["id=message", "id"],
+        ["css=#message", "css:finder"],
+        ["xpath=//textarea[@id='message']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModal']/div/div/div[2]/form/div[4]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "aa"
+    }, {
+      "id": "b830fcc0-ed9e-4c01-8095-f73c74c44518",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group > .btn-success",
+      "targets": [
+        ["css=.form-group > .btn-success", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='exampleModal']/div/div/div[2]/form/div[5]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b347ee4c-aca1-436c-bcdd-fc11a9de08b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-secondary:nth-child(1)",
+      "targets": [
+        ["css=.btn-secondary:nth-child(1)", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='paidModal']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Close')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f16e86f7-a724-4189-ac39-1b9dea5a9c3d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cart",
+      "targets": [
+        ["linkText=Cart", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Cart')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/cart')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1567120-92da-4d7c-859f-230471c2ff28",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "Cosmics Store\\nCart Logout Hello client not sell"
+    }, {
+      "id": "71da2141-dbce-451b-b0ba-a9c908c4fb5e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=(//a[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/logoutAction')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "32eab3cd-24ee-4d2c-9788-843d3a21bc3c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e0381f3a-47b4-4278-84d2-fba41b155746"]
+  }],
+  "urls": ["http://localhost:1111/"],
+  "plugins": []
+}

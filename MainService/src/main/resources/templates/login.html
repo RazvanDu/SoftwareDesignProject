@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cosmics Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top shadow-lg">
+
+        <p>
+            <a href="/" class="navbar-brand d-flex w-50 justify-content-start">Cosmics Store</a>
+        <div th:if="${seller}">
+            <a href="/addcomic" type="button" class="btn btn-primary" role="button">Add comic</a>
+        </div>
+        </p>
+
+        <div class="mx-auto"></div>
+
+        <div class="justify-content-end">
+            <div th:if="${logged}">
+                <a href="/cart" type="button" class="btn btn-success" role="button">Cart</a>
+                <a href="/logoutAction" type="button" class="btn btn-secondary" role="button">Logout</a>
+                <h8 class="text-white">Hello </h8><h8 class="text-white" th:text="${clientFirstName}"></h8> <h8 class="text-white" th:text="${clientLastName}"></h8>
+            </div>
+            <div th:unless="${logged}">
+                <a href="/login" type="button" class="btn btn-success" role="button">Login</a>
+            </div>
+        </div>
+
+    </nav>
+
+</head>
+<body>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <style>
+        body {
+            background-image: url("images/coolbackgroundd.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .idk {
+            margin-left: 40%;
+            margin-right: 40%;
+        }
+        .idk2 {
+            float: right;
+        }
+    </style>
+
+    <div class="idk align-content-center">
+        <form action="/login" class="was-validated" method="post">
+            <div class="form-group">
+                <label for="email"><h4 class="text-white">Email:</h4></label>
+                <input type="text" class="form-control" id="email" placeholder="Enter username" name="email" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <label for="pwd"><h4 class="text-white">Password:</h4></label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <div th:if="${failed}">
+                    <label for="submit"><h8 class="text-danger">Invalid email or password</h8></label>
+                </div>
+                <div th:if="${success}">
+                    <label for="signup"><h8 class="text-success">Successfully created the account</h8></label>
+                </div>
+                <button type="submit" class="btn btn-primary align-content-center" id="submit">Login</button>
+                <a href="/signup" type="button" class="btn btn-primary align-content-center idk2" id="signup">Sign-Up</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

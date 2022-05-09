@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cosmics Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top shadow-lg">
+
+        <p>
+            <a href="/" class="navbar-brand d-flex w-50 justify-content-start">Cosmics Store</a>
+        <div th:if="${seller}">
+            <a href="/addcomic" type="button" class="btn btn-primary" role="button">Add comic</a>
+        </div>
+        </p>
+
+        <div class="mx-auto"></div>
+
+        <div class="justify-content-end">
+            <div th:if="${logged}">
+                <a href="/cart" type="button" class="btn btn-success" role="button">Cart</a>
+                <a href="/logoutAction" type="button" class="btn btn-secondary" role="button">Logout</a>
+                <h8 class="text-white">Hello </h8><h8 class="text-white" th:text="${clientFirstName}"></h8> <h8 class="text-white" th:text="${clientLastName}"></h8>
+            </div>
+            <div th:unless="${logged}">
+                <a href="/login" type="button" class="btn btn-success" role="button">Login</a>
+            </div>
+        </div>
+
+    </nav>
+
+</head>
+<body>
+
+<style>
+    body {
+        background-image: url("images/coolbackgroundd.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .span4 {
+        width: 1000px;
+        height: 1500px;
+    }
+    .span4 .img-left {
+        float: left;
+        border: 3px solid black;
+        height: auto;
+        margin-right: 50px;
+        width: 400px;
+        margin-bottom: 1000px;
+    }
+    .fuck {
+        max-width: 1200px;
+        padding: 0 5%;
+        list-style: none;
+    }
+    .idk {
+        display: inline;
+    }
+</style>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="fuck">
+    <div class="row">
+        <div class="span4">
+            <img th:src="${publisher.logo}" class="img-left img-thumbnail rounded" align="left">
+            <div class="content-heading text-white idk"><h1 th:text="${publisher.name}"></h1></div>
+            <br>
+            <b><h3><p class="text-white idk">Type: </p></h3></b>
+            <h6><p class="text-white"><span th:text="${publisher.type}"></span></p></h6>
+
+            <b><h3><p class="text-white idk"><a th:href="${publisher.website}">Website</a></p></h3></b>
+
+            <b><h3><p class="text-white idk">Series: </p></h3></b>
+            <tr th:each="serie: ${series}">
+                <h6><p class="text-white"><a th:href="${serie.link}" th:text="${serie.title}"></a></p></h6>
+            </tr>
+
+            <p>                                                                                                      </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

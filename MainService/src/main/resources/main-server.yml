@@ -1,0 +1,35 @@
+# Configure this Discovery Server
+eureka:
+  instance:
+    hostname: localhost
+  client:  # Not a client, don't register with yourself (unless running
+    # multiple discovery servers for redundancy)
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  dashboard:
+    path: /eurekawebui
+
+multipart:
+  max-file-size: 100MB
+  max-request-size: 100MB
+
+spring:
+  mvc:
+    static-path-pattern: classpath:/
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+  thymeleaf:
+    cache: false
+    suffix: .html
+
+server:
+  port: 1111
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
